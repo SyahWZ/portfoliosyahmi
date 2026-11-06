@@ -28,7 +28,7 @@ const io = new IntersectionObserver(
   },
   { threshold: 0.12 }
 );
-document.querySelectorAll(".reveal, .gacha-card").forEach((el) => io.observe(el));
+document.querySelectorAll(".reveal, .gacha-card, .timeline").forEach((el) => io.observe(el));
 
 // ===== footer year =====
 document.getElementById("year").textContent = new Date().getFullYear();

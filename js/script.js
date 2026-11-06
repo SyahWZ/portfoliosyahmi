@@ -94,15 +94,15 @@ const term = {
   ],
   whoami: [
     "syahmi — cybersecurity intern, mycert malaysia",
-    "cs undergrad (uitm shah alam) · CGPA 3.64",
-    "edr threat hunting · soc tooling · web dev",
+    "cs undergrad (uitm shah alam) - CGPA 3.64",
+    "edr threat hunting - soc tooling - web dev",
   ],
   skills: [
-    "[security]    edr telemetry · threat hunting · wireshark/pcap",
-    "              elastic siem (eql) · linux · git",
+    "[security]    edr telemetry - threat hunting - wireshark/pcap",
+    "              elastic siem (eql) - linux - git",
     "[programming] python (django, drf, fastapi, tensorflow)",
-    "              java · c++ · javascript",
-    "[web]         html · css · mysql",
+    "              java - c++ - javascript",
+    "[web]         html - css - mysql",
   ],
   projects: [
     "1. soc investigation tools   — django/drf cli + web app",

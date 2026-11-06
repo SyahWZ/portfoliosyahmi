@@ -94,8 +94,8 @@ const term = {
   ],
   whoami: [
     "syahmi — cybersecurity intern, mycert malaysia",
-    "cs undergrad (uitm shah alam) - CGPA 3.64",
-    "edr threat hunting - soc tooling - web dev",
+    "cs undergraduate (uitm shah alam) - CGPA 3.64",
+    "edr threat hunting - soc tooling - web development",
   ],
   skills: [
     "[security]    edr telemetry - threat hunting - wireshark/pcap",

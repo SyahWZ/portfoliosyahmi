@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Syahmi — Cybersecurity Portfolio</title>
+  <meta name="description" content="Portfolio of Muhammad Syahmi — cybersecurity intern at MyCERT Malaysia. EDR threat hunting, SOC tool development in Python and Django, network traffic analysis, and web development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo mono" href="#top">&lt;Syahmi - WHOAMI&gt;</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="btn btn--ghost btn--sm">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="hero__kicker mono">cybersecurity · web development</p>
+        <h1 class="hero__title">Muhammad Syahmi</h1>
+        <p class="hero__role">Cybersecurity Intern at MyCERT Malaysia — I hunt threats in EDR telemetry and build the Django tools that make investigation faster.</p>
+        <p class="hero__pitch">
+          CS undergraduate (CGPA 3.64). Currently interning at the national CERT,
+          doing EDR threat hunting, SOC tool development, and network traffic analysis.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects">View Projects</a>
+          <a class="btn btn--ghost" href="assets/resume.pdf" download>Download Resume</a>
+        </div>
+        <div class="hero__social mono">
+          <a href="https://github.com/SyahWZ" target="_blank" rel="noopener">github.com/SyahWZ</a>
+          <span class="dot">·</span>
+          <a href="https://www.linkedin.com/in/syahmisuroo" target="_blank" rel="noopener">linkedin.com/in/syahmisuroo</a>
+          <span class="dot">·</span>
+          <a href="mailto:syahmisuroo4@gmail.com">syahmisuroo4@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="hero__panel">
+        <!-- A: interactive terminal -->
+        <div class="terminal reveal" id="terminal">
+          <div class="terminal__bar">
+            <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+            <span class="terminal__title mono">syahmi@mycert:~</span>
+          </div>
+          <div class="terminal__screen" id="termScreen">
+            <pre class="terminal__text mono" id="termText"></pre>
+            <div class="terminal__inputline">
+              <span class="mono terminal__prompt">$</span>
+              <input id="termInput" class="mono" autocomplete="off" spellcheck="false"
+                     aria-label="terminal command input" placeholder="type 'help'" />
+            </div>
+          </div>
+        </div>
+
+        <!-- B: live event stream (demo) -->
+        <div class="stream reveal" aria-label="demo event stream">
+          <div class="stream__bar">
+            <span class="stream__pulse" aria-hidden="true"></span>
+            <span class="mono stream__label">event stream</span>
+            <span class="mono stream__demo">demo data</span>
+          </div>
+          <ul class="stream__list mono" id="streamList"></ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section__title type-title"><span class="type-title__text">Skills</span></h2>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title mono">security</h3>
+            <ul class="tags">
+              <li>EDR telemetry</li>
+              <li>Threat hunting</li>
+              <li>Wireshark &amp; pcap analysis</li>
+              <li>Elastic SIEM (EQL)</li>
+              <li>Linux</li>
+              <li>Git / GitHub</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title mono">programming</h3>
+            <ul class="tags">
+              <li>Python</li>
+              <li>Django</li>
+              <li>Django REST Framework</li>
+              <li>FastAPI</li>
+              <li>TensorFlow</li>
+              <li>Java</li>
+              <li>C++</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title mono">web &amp; database</h3>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title mono">tools</h3>
+            <ul class="tags">
+              <li>Visual Studio Code</li>
+              <li>Microsoft Office</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title type-title"><span class="type-title__text">Projects</span></h2>
+        <p class="section__intro reveal">
+          Selected work from my internship and degree projects. Internal tooling
+          is described in sanitized form.
+        </p>
+        <div class="projects-grid">
+
+          <article class="gacha-card">
+            <div class="gacha-card__inner">
+              <!-- FRONT -->
+              <div class="gacha-card__face gacha-card__front">
+                <div class="project-card__media chain" aria-label="animated process chain demo">
+                  <span class="chain__label mono">process chain · animated demo</span>
+                  <div class="chain__row">
+                    <span class="chain__node">explorer.exe</span>
+                    <span class="chain__link"></span>
+                    <span class="chain__node chain__node--alert">powershell.exe</span>
+                    <span class="chain__link chain__link--alert"></span>
+                    <span class="chain__node">cmd.exe</span>
+                    <span class="chain__link chain__link--alert"></span>
+                    <span class="chain__node">rundll32.exe</span>
+                  </div>
+                </div>
+                <div class="project-card__body">
+                  <h3>SOC Investigation Tools</h3>
+                  <p>
+                    Internal CLI and web app that reconstructs process timelines from
+                    EDR data, so investigators can trace parent-to-child process
+                    chains and review host activity in seconds instead of minutes.
+                  </p>
+                  <ul class="tags">
+                    <li>Django</li>
+                    <li>DRF</li>
+                    <li>Python</li>
+                    <li>Elastic</li>
+                    <li>EDR</li>
+                  </ul>
+                  <span class="project-card__note mono">internal project · sanitized description</span>
+                </div>
+              </div>
+              <!-- BACK -->
+              <div class="gacha-card__face gacha-card__back" aria-hidden="true">
+                <span class="gacha-card__q">?</span>
+                <span class="gacha-card__tag mono">project_01</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="gacha-card">
+            <div class="gacha-card__inner">
+              <!-- FRONT -->
+              <div class="gacha-card__face gacha-card__front">
+                <div class="project-card__media">
+                  <img src="assets/projects/mcp-server.svg" alt="Screenshot placeholder — MCP tool orchestration server" loading="lazy" />
+                </div>
+                <div class="project-card__body">
+                  <h3>MCP Tool Orchestration Server</h3>
+                  <p>
+                    An MCP (Model Context Protocol) server that lets AI agents call
+                    and orchestrate SOC investigation tools, turning multi-step
+                    hunts into guided, automated workflows.
+                  </p>
+                  <ul class="tags">
+                    <li>Python</li>
+                    <li>MCP</li>
+                    <li>AI agents</li>
+                  </ul>
+                  <span class="project-card__note mono">internal project · sanitized description</span>
+                </div>
+              </div>
+              <!-- BACK -->
+              <div class="gacha-card__face gacha-card__back" aria-hidden="true">
+                <span class="gacha-card__q">?</span>
+                <span class="gacha-card__tag mono">project_02</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="gacha-card">
+            <div class="gacha-card__inner">
+              <!-- FRONT -->
+              <div class="gacha-card__face gacha-card__front">
+                <div class="project-card__media">
+                  <img src="assets/projects/tomato-disease.svg" alt="Screenshot placeholder — tomato leaf disease detection app" loading="lazy" />
+                </div>
+                <div class="project-card__body">
+                  <h3>Tomato Leaf Disease Detection</h3>
+                  <p>
+                    Degree project — designed and trained a CNN (TensorFlow) to
+                    classify 10 tomato leaf disease types, with a FastAPI backend
+                    exposing image upload and prediction endpoints.
+                  </p>
+                  <ul class="tags">
+                    <li>TensorFlow</li>
+                    <li>FastAPI</li>
+                    <li>CNN</li>
+                    <li>Python</li>
+                  </ul>
+                  <span class="project-card__note mono">degree project · role: ML model &amp; backend API</span>
+                </div>
+              </div>
+              <!-- BACK -->
+              <div class="gacha-card__face gacha-card__back" aria-hidden="true">
+                <span class="gacha-card__q">?</span>
+                <span class="gacha-card__tag mono">project_03</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section__title type-title"><span class="type-title__text">Experience</span></h2>
+        <div class="timeline">
+
+          <div class="timeline__item reveal">
+            <div class="timeline__head">
+              <h3>Python Automation Intern</h3>
+              <span class="mono timeline__dates">Sept 2026 – Dec 2026</span>
+            </div>
+            <p class="timeline__org">Malaysia Computer Emergency Response Team (MyCERT)</p>
+            <ul class="timeline__points">
+              <li>Threat hunting on EDR telemetry — analyzing process parent/child chains and host activity to identify suspicious behavior.</li>
+              <li>Developed internal SOC investigation tools in Python with Django and DRF, built as a CLI and web app.</li>
+              <li>Built an MCP server to let AI agents orchestrate SOC tools for automated investigation workflows.</li>
+              <li>Analyzed network traffic captures in Wireshark and converted raw pcaps into readable audit transcripts.</li>
+            </ul>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__head">
+              <h3>IT Helpdesk Support Intern</h3>
+              <span class="mono timeline__dates">Mar 2024 – Aug 2024</span>
+            </div>
+            <p class="timeline__org">Kridentia Tech Sdn. Bhd.</p>
+            <ul class="timeline__points">
+              <li>Provided Level 1 technical support to client stores, restoring and troubleshooting internet connectivity issues.</li>
+              <li>Logged, tracked, and followed up on support tickets to ensure timely resolution.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <h2 class="section__title type-title"><span class="type-title__text">Contact</span></h2>
+        <p class="contact__pitch reveal">
+          Open to cybersecurity intern and junior roles. If you think I'd be a
+          good fit, reach out — I reply fast.
+        </p>
+        <div class="contact__actions reveal">
+          <a class="btn btn--primary" href="mailto:syahmisuroo4@gmail.com">Email Me</a>
+          <a class="btn btn--ghost" href="assets/resume.pdf" download>Download Resume</a>
+        </div>
+        <ul class="contact__links mono reveal">
+          <li><a href="https://github.com/SyahWZ" target="_blank" rel="noopener">github.com/SyahWZ</a></li>
+          <li><a href="https://www.linkedin.com/in/syahmisuroo" target="_blank" rel="noopener">linkedin.com/in/syahmisuroo</a></li>
+          <li><a href="tel:+60176795191">+60 17-679 5191</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container mono">
+      © <span id="year"></span> Muhammad Syahmi · built with plain HTML, CSS &amp; JavaScript
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -374,8 +374,7 @@ a:hover { text-decoration: underline; }
 .gacha-card:nth-child(3) .gacha-card__inner { transition-delay: 0.3s; }
 
 .gacha-card__face {
-  position: absolute;
-  inset: 0;
+  position: relative;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   background: var(--surface);
@@ -394,6 +393,8 @@ a:hover { text-decoration: underline; }
 }
 
 .gacha-card__back {
+  position: absolute;
+  inset: 0;
   transform: rotateY(180deg);
   align-items: center;
   justify-content: center;
@@ -461,6 +462,14 @@ a:hover { text-decoration: underline; }
   font-size: 0.75rem;
   color: #5c6b7f;
 }
+.project-card__link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+.project-card__link:hover { text-decoration: underline; }
 
 /* ================= EXPERIENCE / TIMELINE ================= */
 

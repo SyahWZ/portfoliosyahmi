@@ -439,6 +439,56 @@ a:hover { text-decoration: underline; }
   display: block;
 }
 
+/* looping wipe slideshow (tomato card): incoming slide wipes in over the old one.
+   both screenshots are 16:10, so they fill the box edge-to-edge and line up mid-wipe */
+.slide-show {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0a1019;
+}
+.slide-show .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+.slide-show .slide--active {
+  z-index: 2;
+  animation: slide-wipe 1.1s ease-in-out both;
+}
+@keyframes slide-wipe {
+  from { clip-path: inset(0 0 0 100%); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+.slide-show__dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  pointer-events: none;
+}
+.slide-show__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(230, 237, 243, 0.35);
+  transition: background 0.3s, transform 0.3s;
+}
+.slide-show__dot--active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+@media (prefers-reduced-motion: reduce) {
+  .slide-show .slide { transition: none; }
+  .slide-show .slide--active { animation: none; }
+}
+
 .project-card__body {
   padding: 22px 24px 24px;
   display: flex;

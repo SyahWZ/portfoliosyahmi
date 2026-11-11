@@ -256,3 +256,21 @@ function streamTick() {
 // seed a few rows so it never looks empty, then keep ticking
 for (let i = 0; i < 6; i++) streamTick();
 setInterval(streamTick, 2400);
+
+// ============================================================
+//  C. looping crossfade slideshow (tomato card)
+// ============================================================
+const SLIDE_MS = 4000;
+document.querySelectorAll("[data-slide-show]").forEach((show) => {
+  const slides = Array.from(show.querySelectorAll(".slide"));
+  const dots = Array.from(show.querySelectorAll(".slide-show__dot"));
+  if (slides.length < 2) return;
+  let i = 0;
+  const render = (n) => {
+    slides.forEach((s, idx) => s.classList.toggle("slide--active", idx === n));
+    dots.forEach((d, idx) => d.classList.toggle("slide-show__dot--active", idx === n));
+  };
+  render(0);
+  if (reducedMotion) return; // respect reduced-motion: stay on the first slide
+  setInterval(() => { i = (i + 1) % slides.length; render(i); }, SLIDE_MS);
+});

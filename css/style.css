@@ -892,8 +892,8 @@ a:hover { text-decoration: underline; }
 }
 
 @media (max-width: 720px) {
-  .nav__toggle { display: flex; }
-  .nav__social { margin-right: 14px; }
+  .nav__toggle { display: flex; order: 3; }
+  .nav__social { margin-right: 14px; order: 2; }
   .icon-link { width: 30px; height: 30px; }
   .icon-link svg { width: 18px; height: 18px; }
 
